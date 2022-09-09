@@ -7,8 +7,8 @@
 
 ## Table of Contents
 
-  * [Introduction](#introduction)
-       + [VSDBAYSoC]
+  * [Introduction](##introduction-to-the-vsdbabysoc)
+       + [ VSDBABYSoC](#vsdbabysoc)
        + 
   * [Overall Design Flow](#overall-design-flow)
   * [ICC2_COMPILER](#openlane-flow)
@@ -75,7 +75,7 @@ VSDBabySoC is a small SoC including PLL, DAC, and a RISCV-based processor named 
 
 VSDBabySoC is a small yet powerful RISCV-based SoC. The main purpose of designing such a small SoC is to test three open-source IP cores together for the first time and calibrate the analog part of it. VSDBabySoC contains one RVMYTH microprocessor, an 8x-PLL to generate a stable clock, and a 10-bit DAC to communicate with other analog devices.
 
-  ![vsdbabysoc_block_diagram](images/vsdbabysoc_block_diagram.png)
+  
 
 ## Problem statement
 
@@ -104,7 +104,7 @@ A digital-to-analog converter or DAC is a system that converts a digital signal 
 
 As we mentioned in [What is RVMYTH](#what-is-rvmyth) section, RVMYTH is designed and created by the TL-Verilog language. So we need a way for compile and trasform it to the Verilog language and use the result in our SoC. Here the `sandpiper-saas` could help us do the job.
 
-  [Here](https://github.com/shivanishah269/risc-v-core) is the repo we used as a reference to model the RVMYTH
+  [Here](https://github.com/ireneann713/vsdriscv) is the repo we used as a reference to model the RVMYTH
 
 ## PLL and DAC modeling
 
