@@ -9,13 +9,9 @@
 
   * [Introduction](##introduction-to-the-vsdbabysoc)
        + [ VSDBABYSoC](#vsdbabysoc)
-       + 
-  * [Overall Design Flow](#overall-design-flow)
+
   * [ICC2 COMPILER](#openlane-flow)
-  * [Synthesis](#synthesis)
-    + [Key concepts](#key-concepts)
-      - [Utilisation Factor](#utilisation-factor)
-       + [Aspect Ratio](#aspect-ratio)
+ 
 * [Acknowledgements](#acknowledgements)
 * [References](#references)
 
@@ -129,6 +125,7 @@ minWidth = 0.23
 minSpacing = 0.23
 
 
+![image](https://user-images.githubusercontent.com/55539862/189332908-fe14c779-4312-4738-9a86-4003f7102566.png)
 
 
 ![Screenshot 2022-09-09 111736](https://user-images.githubusercontent.com/55539862/189316956-c7f3bdc5-5e49-4adf-88e6-54944aacd371.png)
