@@ -66,6 +66,9 @@ It is not possible to sythesis an analog design with Verilog, yet. But there is 
   [Here]([https://github.com/ireneann713/PLL]) is the repo we used as a reference to model the PLL
   
 ## ICC Compiler II
+
+![image](https://user-images.githubusercontent.com/55539862/189332908-fe14c779-4312-4738-9a86-4003f7102566.png)
+
 * IC Compiler is the industry leading place-and-route system for established and emerging
 process technology node designs.
 * Multicore support throughout the flow delivers improved productivity. New technologies,
@@ -124,12 +127,16 @@ defaultWidth = 0.23
 minWidth = 0.23
 minSpacing = 0.23
 
+## ICC Design Planning Flow
 
-![image](https://user-images.githubusercontent.com/55539862/189332908-fe14c779-4312-4738-9a86-4003f7102566.png)
+![image](https://user-images.githubusercontent.com/55539862/189333614-8b2fbdcd-95ab-4c15-a918-1c2576a39824.png)
+
 If the design contains black boxes or the netlist is dirty, use the read_mw_verilog command in place of
 import_designs.
 Also include adding of power pads (VSS,VDD) and insertion of pad fillers;
-Connecting Power and Ground Ports
+
+
+## Connecting Power and Ground Ports
 The macro cells and modules in your design contain power and ground pins that must be
 connected before initializing the floorplan. The derive_pg_connection command (or Preroute >
 Derive PG Connection in the GUI) connects power, ground, and tie-off pins to power and ground
@@ -140,6 +147,6 @@ derive_pg_connection command. This is the only recommended method for creating a
 and ground (PG) network for nonmultivoltage designs. Use this command before using any of the
 optimization commands.
 
-![image](https://user-images.githubusercontent.com/55539862/189333614-8b2fbdcd-95ab-4c15-a918-1c2576a39824.png)
+
 
 ![Screenshot 2022-09-09 111736](https://user-images.githubusercontent.com/55539862/189316956-c7f3bdc5-5e49-4adf-88e6-54944aacd371.png)
