@@ -215,6 +215,20 @@ To support a hierarchical design flow, the IC Compiler II tool provides timing b
 
 
 ![image](https://user-images.githubusercontent.com/55539862/189338325-e40637d5-9bb6-4589-bb8f-d8b3c9e576d9.png)
+## RVMYTH CORE IN VSDBABYSOC 
+ Synthesised Netlist of RVMYTH was used for the design.
+
+* It doesn't have analog blocks like ADC, DAC, band-gap, on-chip pll, due to non-availability of open-source IP's for these blocks
+
+* Dummy interconnect technology file (ITF) was used to generate TLU+ files using ICC2 grdgenxo utility of STAR-RC
+
+* Memory views were generated using open-source memory compiler OpenRAM for open-source nangate 45nm freePDK
+
+All scripts in "standAlone" directory are ICC2 reference scripts. It cannot be used with any other PNR tool
+
+## Timing Reports
+
+![image](https://user-images.githubusercontent.com/55539862/189341246-615946d2-1d6d-4204-8db1-814495b4ec08.png)
 
 
 ![Screenshot 2022-09-09 111736](https://user-images.githubusercontent.com/55539862/189316956-c7f3bdc5-5e49-4adf-88e6-54944aacd371.png)
