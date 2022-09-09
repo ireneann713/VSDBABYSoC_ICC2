@@ -11,7 +11,6 @@
        + [ VSDBABYSoC](#vsdbabysoc)
        + 
   * [Overall Design Flow](#overall-design-flow)
-  * [Synopsys Custom Compiler]
   * [ICC2_COMPILER](#openlane-flow)
     + [1.  Synthesis](#1--synthesis)
     + [1.1 Synthesis Strategies](#11-synthesis-strategies)
@@ -131,6 +130,8 @@ manufacturability and deliver faster turn-around-time.
 * IC Compiler In-Design technology seamlessly integrates the IC Validator signoff DRC and
 metal fill solution allowing designers to mitigate manufacturing compliance challenges in
 the implementation stage for faster signoff closure.
+
+![image](https://user-images.githubusercontent.com/55539862/189331113-3078e99c-6cc8-4817-ab80-e15b7e32719b.png)
 
 
 ![Screenshot 2022-09-09 111736](https://user-images.githubusercontent.com/55539862/189316956-c7f3bdc5-5e49-4adf-88e6-54944aacd371.png)
