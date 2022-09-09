@@ -10,8 +10,29 @@
   * [Introduction](##introduction-to-the-vsdbabysoc)
        + [ VSDBABYSoC](#vsdbabysoc)
 
-  * [ICC2 COMPILER](#openlane-flow)
- 
+  * [ICC2 COMPILER](##icc-compiler-ii) 
+      +  [Milkyway Reference Libraries]()
+      +  [Technology File (.tf file)]()
+      +  [ICC Design Planning Flow]()
+      +  [Create the Starting Floorplan]()
+      +  [Connecting Power and Ground Ports]()
+      + [ Floorplan After Initialization]()
+      +  [Planning I/Os and Flip-Chip Bumps]()
+      +  [Creating a 3DIC Design]()
+      + [ Managing Design Blocks]()
+      + [Performing Block Shaping and Macro Placement]()
+      + [Performing Power Planning]()
+      + [Performing Global Planning]()
+      + [Performing Clock Trunk Planning]()
+      + [Performing Pin Assignment]()
+      + [Performing Timing Budgeting]()
+* [RVMYTH CORE IN VSDBABYSOC ]()
+
+    + Timing Reports
+* [Final Output]()
+
+* [Important Points about the design]()
+     
 * [Acknowledgements](#acknowledgements)
 * [References](#references)
 
