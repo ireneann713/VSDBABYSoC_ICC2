@@ -106,14 +106,14 @@ As we mentioned in [What is RVMYTH](#what-is-rvmyth) section, RVMYTH is designed
 
   [Here](https://github.com/ireneann713/vsdriscv) is the repo we used as a reference to model the RVMYTH
 
-## PLL and DAC modeling
+## PLL modeling
 
-It is not possible to sythesis an analog design with Verilog, yet. But there is a chance to simulate it using `real` datatype. We will use the following repositories to model the PLL and DAC cores:
+It is not possible to sythesis an analog design with Verilog, yet. But there is a chance to simulate it using `real` datatype. We will use the following repositories to model the PLL cores:
 
-  1. [Here](https://github.com/vsdip/rvmyth_avsdpll_interface) is the repo we used as a reference to model the PLL
-  2. [Here](https://github.com/vsdip/rvmyth_avsddac_interface) is the repo we used as a reference to model the DAC
+  [Here]([https://github.com/ireneann713/PLL]) is the repo we used as a reference to model the PLL
+  
 
-**CAUTION:** In the beginning of the project, we get our verilog model of the PLL from [here](https://github.com/vsdip/rvmyth_avsdpll_interface). However, by proceeding the project to the physical design flow we realize that this model needs a little changes to become sufficient for a real IP core. So we changed it a little and created a new model named `AVSDPLL` based on [this](https://github.com/lakshmi-sathi/avsdpll_1v8) IP
+
 
 
 ![Screenshot 2022-09-09 111736](https://user-images.githubusercontent.com/55539862/189316956-c7f3bdc5-5e49-4adf-88e6-54944aacd371.png)
