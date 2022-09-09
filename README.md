@@ -216,26 +216,58 @@ To support a hierarchical design flow, the IC Compiler II tool provides timing b
 
 ![image](https://user-images.githubusercontent.com/55539862/189338325-e40637d5-9bb6-4589-bb8f-d8b3c9e576d9.png)
 ## RVMYTH CORE IN VSDBABYSOC 
- Synthesised Netlist of RVMYTH was used for the design.
 
-* It doesn't have analog blocks like ADC, DAC, band-gap, on-chip pll, due to non-availability of open-source IP's for these blocks
+### Step 1.
+ Synthesise the RVMYTH design using the Design Compiler and generate the Gate Level Netlist.
+ The library used for the Synthesis 45nm Nangate Typical libs.
+ 
+ For more explanation of STA and Synthesis refer:
+ [Adavnced Synthesis and STA Using Design Compiler]( https://github.com/ireneann713/AdvancedSynthesisandSTAwithDC)
+ 
+#### Timing Reports
+
+![image](https://user-images.githubusercontent.com/55539862/189341246-615946d2-1d6d-4204-8db1-814495b4ec08.png)
+
+
+### Step 2:
+Set the location  of technology files and verilog netlist files for the Physical  Design using ICC Compiler II.
+The top.tcl file contains the execution commands of the physical Design flow.The technology file used here is 45nm Technology and verilog netlist is rvmyth.
+
+ ### Step 3
+ 
+ Physical Design is done and the final output is shown below:
+
+
+
+## Final Output
+
+![Screenshot 2022-09-09 111736](https://user-images.githubusercontent.com/55539862/189316956-c7f3bdc5-5e49-4adf-88e6-54944aacd371.png)
+
+
+### Important Points about the design
+* The design that was first done included analog blocks of PLL and DAC in 28nm.Since we have encountered some errors in the the design flow we used did not include analog blocks.
+
+
+* The error encountered were:
+    + Related to the Standard Cells LEF file in 28nm 
+    + The analog blocks LEF File were not able to be executed with standard LEF.
+    + The estimate_timing was not able to execute due to the problem with 28nm LEF files.
+    
+* Therefore we did our design with digital block i.e. RVMYTH,the 32 bit RISC-V Core in 45nm Technology.
 
 * Dummy interconnect technology file (ITF) was used to generate TLU+ files using ICC2 grdgenxo utility of STAR-RC
 
 * Memory views were generated using open-source memory compiler OpenRAM for open-source nangate 45nm freePDK
 
 All scripts in "standAlone" directory are ICC2 reference scripts. It cannot be used with any other PNR tool
-
-## Timing Reports
-
-![image](https://user-images.githubusercontent.com/55539862/189341246-615946d2-1d6d-4204-8db1-814495b4ec08.png)
-
-
-![Screenshot 2022-09-09 111736](https://user-images.githubusercontent.com/55539862/189316956-c7f3bdc5-5e49-4adf-88e6-54944aacd371.png)
-
 ## ACKNOWLEDGEMENTS
-
+* Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
 
 ## REFERENCES
 
+* https://github.com/ireneann713/AdvancedPhysicalDesign-with-OpenLane-using-Sky-130
+* https://github.com/ireneann713/FunctionalNetlistingof-VSDBABYSoC
+* https://github.com/ireneann713/vsdriscv
+* https://github.com/ireneann713/AdvancedSynthesisandSTAwithDC
+* https://github.com/ireneann713/PLL
 
