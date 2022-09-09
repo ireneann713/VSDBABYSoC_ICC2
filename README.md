@@ -178,6 +178,8 @@ To manage design blocks, the IC Compiler II tool supports operations to easily p
 ## Performing Block Shaping and Macro Placement
 
 The block shaping flow refines the boundary for the block based on the rough rectangular or rectilinear shape defined during hierarchy exploration. When creating the block shape, the tool considers design constraints such as target utilization for the block, channel width and keepout settings, while minimizing feedthroughs and interface wire lengths. You can create an optional block grid for your design; the tool aligns block shapes to the grid.
+
+
 ![image](https://user-images.githubusercontent.com/55539862/189337688-34a41c90-07d1-4ada-a021-836f075a89c5.png)
 
 
@@ -203,6 +205,8 @@ To manage clock trunks during design planning, the tool supports clock trunk pla
 ## Performing Pin Assignment
 
 The IC Compiler II tool provides extensive control over pin placement and feedthrough creation during floorplanning. Pin placement is based on global routing and can be guided by user-defined constraints. You can make minimal changes to an existing pin placement by changing constraints and running pin assignment in incremental mode.
+
+
 ![image](https://user-images.githubusercontent.com/55539862/189338205-1719fd7f-11b1-4370-9734-d57f8cc3ea0b.png)
 
 ## Performing Timing Budgeting
