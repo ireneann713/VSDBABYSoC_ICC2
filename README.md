@@ -11,6 +11,7 @@
        + [ VSDBABYSoC](#vsdbabysoc)
        + 
   * [Overall Design Flow](#overall-design-flow)
+  * [Synopsys Custom Compiler]
   * [ICC2_COMPILER](#openlane-flow)
     + [1.  Synthesis](#1--synthesis)
     + [1.1 Synthesis Strategies](#11-synthesis-strategies)
@@ -112,8 +113,24 @@ It is not possible to sythesis an analog design with Verilog, yet. But there is 
 
   [Here]([https://github.com/ireneann713/PLL]) is the repo we used as a reference to model the PLL
   
-
-
+## ICC Compiler II
+* IC Compiler is the industry leading place-and-route system for established and emerging
+process technology node designs.
+* Multicore support throughout the flow delivers improved productivity. New technologies,
+like concurrent clock and data (CCD) with clock concurrent optimization, PrimeTime
+physically-aware engineering change order (PT-ECO) guidance with minimum physical
+impact implementation, and golden unified power format (IEEE 1801 UPF), enable
+designers to handle gigascale design complexity and meet tight project schedules.
+* IC Compiler hierarchical design technology enables powerful design planning and early
+chip level exploration / analysis features to handle large, complex designs.
+* IC Compiler delivers smaller die size with predictable design closure to reduce the cost of
+design.
+* IC Compiler with Zroute digital router technology utilizes advanced routing algorithms,
+concurrent manufacturability optimizations and multi-threading, to improve
+manufacturability and deliver faster turn-around-time.
+* IC Compiler In-Design technology seamlessly integrates the IC Validator signoff DRC and
+metal fill solution allowing designers to mitigate manufacturing compliance challenges in
+the implementation stage for faster signoff closure.
 
 
 ![Screenshot 2022-09-09 111736](https://user-images.githubusercontent.com/55539862/189316956-c7f3bdc5-5e49-4adf-88e6-54944aacd371.png)
