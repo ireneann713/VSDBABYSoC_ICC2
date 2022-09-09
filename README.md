@@ -134,4 +134,44 @@ the implementation stage for faster signoff closure.
 ![image](https://user-images.githubusercontent.com/55539862/189331113-3078e99c-6cc8-4817-ab80-e15b7e32719b.png)
 
 
+### 1. Milkyway Reference Libraries
+Information is stored in so-called “views”, for example:
+* CEL: The full layout view
+* FRAM: The abstract view used for P&R
+* LM: Logic Model with Timing and Power info (optional*) 。(Optional) here means that the logical
+libraries do not have to be stored within the Milkyway library structure, but can be located
+anywhere else. IC Compiler only reads logical libraries (.db) specified through the link_library
+variable.
+
+### 2. Technology File (.tf file)
+* Tech File is unique to each technology
+* Contains metal layer technology parameters:
+* Number and name designations for each layer/via
+* Dielectric constant for technology
+* Physical and electrical characteristics of each layer/via
+* Design rules for each layer/Via (Minimum wire widths and wire-to-wire spacing, etc.)
+* Units and precision for electrical units
+* Colors and patterns of layers for display
+Example of a Technology File:
+Technology {
+dielectric = 3.7
+unitTimeName = "ns"
+timePrecision = 1000
+unitLengthName = "micron"
+lengthPrecision = 1000
+gridResolution = 5
+unitVoltageName = "v"
+}
+...
+Layer "m1" {
+layerNumber = 16
+maskName = "metal1"
+pitch = 0.56
+defaultWidth = 0.23
+minWidth = 0.23
+minSpacing = 0.23
+
+
+
+
 ![Screenshot 2022-09-09 111736](https://user-images.githubusercontent.com/55539862/189316956-c7f3bdc5-5e49-4adf-88e6-54944aacd371.png)
