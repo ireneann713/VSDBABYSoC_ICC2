@@ -1,0 +1,50 @@
+Warning: Design 'rvmyth' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : rvmyth
+Version: S-2021.06-SP5-1
+Date   : Sat Sep 10 00:42:27 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: reset (input port clocked by MYCLK)
+  Endpoint: CPU_reset_a1_reg
+            (rising edge-triggered flip-flop clocked by MYCLK)
+  Path Group: MYCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  rvmyth             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock MYCLK (rise edge)                  0.00       0.00
+  clock network delay (ideal)              3.00       3.00
+  input external delay                     5.00       8.00 f
+  reset (in)                               0.00       8.00 f
+  CPU_reset_a1_reg/D (DFF_X1)              0.01       8.01 f
+  data arrival time                                   8.01
+
+  clock MYCLK (rise edge)                 10.00      10.00
+  clock network delay (ideal)              3.00      13.00
+  clock uncertainty                       -0.50      12.50
+  CPU_reset_a1_reg/CK (DFF_X1)             0.00      12.50 r
+  library setup time                      -0.16      12.34
+  data required time                                 12.34
+  -----------------------------------------------------------
+  data required time                                 12.34
+  data arrival time                                  -8.01
+  -----------------------------------------------------------
+  slack (MET)                                         4.33
+
+
+1

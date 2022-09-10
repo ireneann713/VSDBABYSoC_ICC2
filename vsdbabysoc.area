@@ -1,0 +1,48 @@
+Warning: Design 'rvmyth' has '1' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : rvmyth
+Version: S-2021.06-SP5-1
+Date   : Sat Sep 10 00:42:27 2022
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'rvmyth' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/irene/workshop/icc2_workshop/nangate_typical.db)
+
+Number of ports:                           12
+Number of nets:                          5058
+Number of cells:                         4011
+Number of combinational cells:           2785
+Number of sequential cells:              1223
+Number of macros/black boxes:               0
+Number of buf/inv:                        329
+Number of references:                      33
+
+Combinational area:               3346.812069
+Buf/Inv area:                      204.287999
+Noncombinational area:            5499.283801
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                  8846.095870
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  ---------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-     Noncombi-  Black-
+                                  Total      Total    national   national   boxes   Design
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------
+rvmyth                            8846.0959    100.0  3346.8121  5499.2838  0.0000  rvmyth
+--------------------------------  ---------  -------  ---------  ---------  ------  ---------
+Total                                                 3346.8121  5499.2838  0.0000
+
+1
