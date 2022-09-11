@@ -288,6 +288,10 @@ After CTS, we have information of all the placed cells, blockages, clock tree bu
 
 ![image](https://user-images.githubusercontent.com/55539862/189543551-d0ebc0ed-e782-489a-9384-99dde6966125.png)
 
+Cells placed inside the core:
+
+![image](https://user-images.githubusercontent.com/55539862/189545255-90939997-1a54-4748-aebc-f22b400f12eb.png)
+
 
 ### Important Points about the design
 * The design that was first done included analog blocks of PLL and DAC in 28nm.Since we have encountered some errors in the the design flow we used did not include analog blocks.
