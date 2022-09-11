@@ -280,6 +280,8 @@ The top.tcl file contains the execution commands of the physical Design flow.The
 
 * Memory views were generated using open-source memory compiler OpenRAM for open-source nangate 45nm freePDK
 
+*This repo is only for educational purposes.
+
 All scripts in "standAlone" directory are ICC2 reference scripts. It cannot be used with any other PNR tool
 ## ACKNOWLEDGEMENTS
 * Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
