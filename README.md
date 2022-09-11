@@ -32,6 +32,8 @@
 * [Final Output]()
 
 * [Important Points about the design]()
+* [Errors encountered in the Design Flow]()
+
      
 * [Acknowledgements](#acknowledgements)
 * [References](#references)
@@ -238,25 +240,35 @@ To support a hierarchical design flow, the IC Compiler II tool provides timing b
 ![image](https://user-images.githubusercontent.com/55539862/189338325-e40637d5-9bb6-4589-bb8f-d8b3c9e576d9.png)
 ## RVMYTH CORE IN VSDBABYSOC 
 
-### Step 1.
- Synthesise the RVMYTH design using the Design Compiler and generate the Gate Level Netlist.
- The library used for the Synthesis 45nm Nangate Typical libs.
+
+ * Synthesise the RVMYTH design using the Design Compiler and generate the Gate Level Netlist.The library used for the Synthesis 45nm Nangate Typical libs.
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/55539862/189540845-e1eed1e8-cc0a-40a5-94fe-6b54efa11479.png)
+
  
  For more explanation of STA and Synthesis refer:
  [Adavnced Synthesis and STA Using Design Compiler]( https://github.com/ireneann713/AdvancedSynthesisandSTAwithDC)
  
-#### Timing Reports
 
-![image](https://user-images.githubusercontent.com/55539862/189341246-615946d2-1d6d-4204-8db1-814495b4ec08.png)
+#### create_power
+
+![image](https://user-images.githubusercontent.com/55539862/189543264-f6cb84bc-1202-48f6-97d8-07765d3050a7.png)
+
+#### Pin Placement
+
+![image](https://user-images.githubusercontent.com/55539862/189543327-857698b9-8b10-4fbf-938b-b6a5954be517.png)
+
+#### Timing Estimation
 
 
-### Step 2:
-Set the location  of technology files and verilog netlist files for the Physical  Design using ICC Compiler II.
-The top.tcl file contains the execution commands of the physical Design flow.The technology file used here is 45nm Technology and verilog netlist is rvmyth.
-
- ### Step 3
+![image](https://user-images.githubusercontent.com/55539862/189543461-9e692038-917c-47d0-8157-8dcf256a8928.png)
+ #### Place, CTS, Route
  
- Physical Design is done and the final output is shown below:
+ 
+
+![image](https://user-images.githubusercontent.com/55539862/189543551-d0ebc0ed-e782-489a-9384-99dde6966125.png)
+
 
 
 
@@ -283,6 +295,21 @@ The top.tcl file contains the execution commands of the physical Design flow.The
 * This repo is only for educational purposes.
 
 All scripts in "standAlone" directory are ICC2 reference scripts. It cannot be used with any other PNR tool
+
+
+
+## Errors encountered in the Design Flow
+
+* The errors related to the macro height and width mismatch with the standard LEF File.
+
+
+![image](https://user-images.githubusercontent.com/55539862/189542930-d1f73953-9cb7-4566-8027-340e70a332ac.png)
+
+![image](https://user-images.githubusercontent.com/55539862/189542998-29a73fa1-31d0-4ed7-b6e5-9c62a0a84d0e.png)
+
+
+
+
 ## ACKNOWLEDGEMENTS
 * Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
 
