@@ -240,7 +240,7 @@ To support a hierarchical design flow, the IC Compiler II tool provides timing b
 ![image](https://user-images.githubusercontent.com/55539862/189338325-e40637d5-9bb6-4589-bb8f-d8b3c9e576d9.png)
 ## RVMYTH CORE IN VSDBABYSOC 
 
-
+#### Read Synthesized Verilog
  * Synthesise the RVMYTH design using the Design Compiler and generate the Gate Level Netlist.The library used for the Synthesis 45nm Nangate Typical libs.
  
  
@@ -270,13 +270,6 @@ To support a hierarchical design flow, the IC Compiler II tool provides timing b
 ![image](https://user-images.githubusercontent.com/55539862/189543551-d0ebc0ed-e782-489a-9384-99dde6966125.png)
 
 
-
-
-## Final Output
-
-![Screenshot 2022-09-09 111736](https://user-images.githubusercontent.com/55539862/189316956-c7f3bdc5-5e49-4adf-88e6-54944aacd371.png)
-
-
 ### Important Points about the design
 * The design that was first done included analog blocks of PLL and DAC in 28nm.Since we have encountered some errors in the the design flow we used did not include analog blocks.
 
@@ -302,10 +295,23 @@ All scripts in "standAlone" directory are ICC2 reference scripts. It cannot be u
 
 * The errors related to the macro height and width mismatch with the standard LEF File.
 
-
 ![image](https://user-images.githubusercontent.com/55539862/189542930-d1f73953-9cb7-4566-8027-340e70a332ac.png)
 
 ![image](https://user-images.githubusercontent.com/55539862/189542998-29a73fa1-31d0-4ed7-b6e5-9c62a0a84d0e.png)
+
+* In Timing Estimation, voltage mismatches were there.This error was the consequence of the error faced in 28nm Technology LEF files.
+
+![image](https://user-images.githubusercontent.com/55539862/189544098-9e25785f-d3db-4263-98c0-b3fee49881d5.png)
+
+
+So for the training purpose and for better understanding of the  physical design flow, we used only Digital block i.e., rvmyth and removed the Analog IPs i.e., PLL and DAC.
+
+
+## Final Output
+
+![Screenshot 2022-09-09 111736](https://user-images.githubusercontent.com/55539862/189316956-c7f3bdc5-5e49-4adf-88e6-54944aacd371.png)
+
+
 
 
 
