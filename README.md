@@ -251,6 +251,18 @@ To support a hierarchical design flow, the IC Compiler II tool provides timing b
  For more explanation of STA and Synthesis refer:
  [Adavnced Synthesis and STA Using Design Compiler]( https://github.com/ireneann713/AdvancedSynthesisandSTAwithDC)
  
+ ### Floorplan
+ 
+ 
+ Floorplan is one the critical & important step in Physical design. Quality of your Chip / Design implementation 
+depends on how good is the Floorplan. A good floorplan can be make implementation process (place, cts,
+route & timing closure) cake walk. On similar lines a bad floorplan can create all kind issues in the design
+(congestion, timing, noise, IR, routing issues). A bad floorplan will blow up the area, power & affects reliability,
+life of the IC and also it can increase overall IC cost (more effort to closure, more LVTs/ULVTs).
+
+ ![image](https://user-images.githubusercontent.com/55539862/189545643-0900071d-6b69-432e-9516-d2edbf2fb994.png)
+
+ 
 
 #### create_power
 
