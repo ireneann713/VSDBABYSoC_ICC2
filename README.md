@@ -16,7 +16,7 @@
       +  [ICC Design Planning Flow]()
       +  [Create the Starting Floorplan]()
       +  [Connecting Power and Ground Ports]()
-      + [ Floorplan After Initialization]()
+      + [ Floorplan After Initialization](#floorplan-after-initialization)
       +  [Planning I/Os and Flip-Chip Bumps]()
       +  [Creating a 3DIC Design]()
       + [ Managing Design Blocks]()
@@ -28,7 +28,8 @@
       + [Performing Timing Budgeting]()
 * [RVMYTH CORE IN VSDBABYSOC ]()
 
-    + Timing Reports
+   + [Stages of Physical Design Flow]()
+   
 * [Final Output]()
 
 * [Important Points about the design]()
