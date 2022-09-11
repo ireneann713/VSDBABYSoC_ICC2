@@ -327,7 +327,9 @@ All scripts in "standAlone" directory are ICC2 reference scripts. It cannot be u
 ![image](https://user-images.githubusercontent.com/55539862/189544098-9e25785f-d3db-4263-98c0-b3fee49881d5.png)
 
 
-So for the training purpose and for better understanding of the  physical design flow, we used only Digital block i.e., rvmyth and removed the Analog IPs i.e., PLL and DAC.
++ So for the training purpose and for better understanding of the  physical design flow, we used only Digital block i.e., rvmyth and removed the Analog IPs i.e., PLL and DAC.
+
++ Since majority of the errors were encountered due to the standard lef file of 28nm Technology we shifted to 45nm Opensource PDK.
 
 
 ## Final Output
