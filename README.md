@@ -285,7 +285,7 @@ logical connections present in the netlist (i.e. Logical connectivity converted 
 
 ![image](https://user-images.githubusercontent.com/55539862/189543551-d0ebc0ed-e782-489a-9384-99dde6966125.png)
 
-Cells placed inside the core:
+Cells placed inside the core area:
 
 ![image](https://user-images.githubusercontent.com/55539862/189545454-75beed6e-cedf-487b-8c9e-1c5a5a2651cc.png)
 
