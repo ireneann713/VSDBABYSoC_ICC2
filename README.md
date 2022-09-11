@@ -254,8 +254,7 @@ To support a hierarchical design flow, the IC Compiler II tool provides timing b
 
 #### create_power
 
-This	command	creates	addiGonal	power	network	robustness	but	at	the	expense	of	
-routability	later.	
+This	command	creates	additional	power	network	robustness	but	at	the	expense	of	routability	later.	
 
 
 
@@ -274,17 +273,15 @@ In block-level PnR, input-output pins location are generally decided by the full
 ![image](https://user-images.githubusercontent.com/55539862/189543461-9e692038-917c-47d0-8157-8dcf256a8928.png)
  #### Place, CTS, Route
  
- *Placement is the process of finding a suitable physical location for each cell in the block.
+ * Placement is the process of finding a suitable physical location for each cell in the block.
 Tool only determine the location of each standard cell on the die.
 Placement does not just place the standard cell available in the synthesized netlist, it also optimized the design.
  
- *CTS is the process of connecting the clocks to all clock pin of sequential circuits by using inverters/buffers in order to balance the skew and to minimize the insertion delay. All the clock pins are driven by a single clock source. Clock balancing is important for meeting all the design constraints.
+ * CTS is the process of connecting the clocks to all clock pin of sequential circuits by using inverters/buffers in order to balance the skew and to minimize the insertion delay. All the clock pins are driven by a single clock source. Clock balancing is important for meeting all the design constraints.
  
-  *Routing is the stage after CTS and optimization where exact paths for the interconnection of standard cells and macros and I/O
+  * Routing is the stage after CTS and optimization where exact paths for the interconnection of standard cells and macros and I/O
 pins are determined. Electrical connections using metals and vias are created in the layout, defined by the
-logical connections present in the netlist (i.e. Logical connectivity converted as physical connectivity).
-
-After CTS, we have information of all the placed cells, blockages, clock tree buffers/inverters and I/O pins
+logical connections present in the netlist (i.e. Logical connectivity converted as physical connectivity). After CTS, we have information of all the placed cells, blockages, clock tree buffers/inverters and I/O pins
 
 ![image](https://user-images.githubusercontent.com/55539862/189543551-d0ebc0ed-e782-489a-9384-99dde6966125.png)
 
