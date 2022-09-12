@@ -28,6 +28,7 @@
       + [Performing Timing Budgeting](#performing-timing-budgeting)
 * [RVMYTH CORE IN VSDBABYSOC ](#rvmyth-core-in-vsdbabysoc)
    + [Stages of Physical Design Flow](#stages-of-physical-design-flow)
+   + [Timing Estimation Post Route](#)
 * [Important Points about the design](#important-points-about-the-design)
 * [Errors encountered in the Design Flow](#errors-encountered-in-the-design-flow)
 * [Final Output](#final-output)
@@ -354,10 +355,112 @@ Cells placed inside the core area:
 
 
 #### Timing Estimation Post Route
-  
-  ![image](https://user-images.githubusercontent.com/55539862/189611644-5c239d27-7372-43d0-9af4-7a8bdaaf2a50.png)
+
+```
+
+Report : qor
+        -summary
+Design : rvmyth
+Version: T-2022.03
+Date   : Mon Sep 12 14:14:11 2022
+****************************************
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+func1::estimated_corner
+                   (Setup)             4.44           0.00              0
+func1              (Setup)             4.33           0.00              0
+Design             (Setup)             4.33           0.00              0
+
+func1              (Hold)             -0.03         -26.17           1009
+Design             (Hold)             -0.03         -26.17           1009
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                           8846.10
+Cell Area (netlist and physical only):         8846.10
+Nets with DRC Violations:       20
 
 
+```
+
+```
+
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+Design : rvmyth
+Version: T-2022.03
+Date   : Mon Sep 12 14:14:10 2022
+****************************************
+
+  Startpoint: reset (input port clocked by MYCLK)
+  Endpoint: CPU_reset_a1_reg (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: estimated_corner
+  Scenario: func1::estimated_corner
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path       Delta Incr     Analysis
+  ----------------------------------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      3.00      3.00
+  input external delay                             5.00      8.00 f
+  reset (in)                                       0.00      8.00 f      0.00
+  CPU_reset_a1_reg/D (DFF_X1)                      0.01 e    8.01 f      0.00
+  data arrival time                                          8.01        0.00        Delta arrival
+
+  clock MYCLK (rise edge)                         10.00     10.00
+  clock network delay (ideal)                      3.00     13.00
+  CPU_reset_a1_reg/CK (DFF_X1)                     0.00     13.00 r      0.00
+  clock uncertainty                               -0.50     12.50
+  library setup time                              -0.04     12.46
+  data required time                                        12.46
+  ----------------------------------------------------------------------------------------------------
+  data required time                                        12.46
+  data arrival time                                         -8.01
+  ----------------------------------------------------------------------------------------------------
+  slack (MET)                                                4.44
+
+```
+
+```
+Report : qor
+Design : rvmyth
+Version: T-2022.03
+Date   : Mon Sep 12 14:14:10 2022
+****************************************
+
+
+Scenario           'func1::estimated_corner'
+Timing Path Group  '**in2reg_default**'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:              5.01
+Critical Path Slack:               4.44
+Critical Path Clk Period:         10.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+----------------------------------------
+
+Scenario           'func1::estimated_corner'
+Timing Path Group  'MYCLK'
+----------------------------------------
+Levels of Logic:                     41
+Critical Path Length:              3.09
+Critical Path Slack:               6.37
+Critical Path Clk Period:         10.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+----------------------------------------
+
+```
 
 
 ### Important Points about the design
