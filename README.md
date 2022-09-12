@@ -33,7 +33,7 @@
 * [Final Output](#final-output)
 * [Future Works](#future-works) 
 * [Acknowledgements](#acknowledgements)
-* [Contributor](#contributor)
+* [Contributors](#contributors)
 * [References](#references)
 
 
