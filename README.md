@@ -350,7 +350,7 @@ All scripts in "standAlone" directory are ICC2 reference scripts. It cannot be u
 
 ### Cross Talk Analysis in Physical Design
 
-#### What is Crosstalk?
+#### Crosstalk?
 
 Crosstalk refers to undesired or unintentional effects, which can cause functional failure in the chips. This functional failure refers to either change in the value of the signal voltage or change in timing.
 
@@ -364,15 +364,19 @@ There are two types of noise effects, namely,
 
 2.Crosstalk Delay: This is due to the coupling between the switching activity of the victim and the switching activity of the aggressors, which results in the change of timing on a particular victim signals.
 
+![image](https://user-images.githubusercontent.com/55539862/189584201-779f12c2-fe43-45f8-9da5-34468b70189d.png)
+ 
+ 
+ * Crosstalk delta delay analysis is to be done for this design.
+ 
 
-
-
-
-
+## Contributors
+[Irene Ann Zachariah](https://in.linkedin.com/in/irene-ann-zachariah231)
 
 
 ## ACKNOWLEDGEMENTS
 * Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
+* 
 
 ## REFERENCES
 
@@ -381,4 +385,5 @@ There are two types of noise effects, namely,
 * https://github.com/ireneann713/vsdriscv
 * https://github.com/ireneann713/AdvancedSynthesisandSTAwithDC
 * https://github.com/ireneann713/PLL
+* https://medium.com/@einfochips/crosstalk-analysis-and-its-impact-on-timing-in-7nm-technology-abcfb795190f
 
