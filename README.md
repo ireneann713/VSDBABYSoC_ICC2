@@ -241,6 +241,8 @@ To support a hierarchical design flow, the IC Compiler II tool provides timing b
 ![image](https://user-images.githubusercontent.com/55539862/189338325-e40637d5-9bb6-4589-bb8f-d8b3c9e576d9.png)
 ## RVMYTH CORE IN VSDBABYSOC 
 
+### Stages of Physical Design Flow
+
 #### Read Synthesized Verilog
  * Synthesise the RVMYTH design using the Design Compiler and generate the Gate Level Netlist and read the synthesised netlist.The library used for the Synthesis 45nm Nangate Typical libs.
  
