@@ -280,8 +280,62 @@ In block-level PnR, input-output pins location are generally decided by the full
 
 #### Timing Estimation
 
+* IO Path
 
-![image](https://user-images.githubusercontent.com/55539862/189543461-9e692038-917c-47d0-8157-8dcf256a8928.png)
+ ![image](https://user-images.githubusercontent.com/55539862/189543461-9e692038-917c-47d0-8157-8dcf256a8928.png)
+
+
+* Reg-to-reg paths
+```
+Startpoint: CPU_src2_value_a3_reg[0]
+              (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: CPU_jalr_tgt_pc_a3_reg[31]
+            (rising edge-triggered flip-flop clocked by MYCLK)
+  Path Group: MYCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  rvmyth             5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             3.00       3.00
+  CPU_src2_value_a3_reg[0]/clocked_on (**SEQGEN**)        0.00 #     3.00 r
+  CPU_src2_value_a3_reg[0]/Q (**SEQGEN**)                 0.00       3.00 r
+  lt_161/B_0 (*LT_UNS_OP_32_32_1)                         0.00       3.00 r
+  lt_161/*cell*20/B[0] (DW01_cmp2_width32)                0.00       3.00 r
+  ...
+  lt_161/*cell*20/LT_LE (DW01_cmp2_width32)               0.14       3.14 r
+  lt_161/Z_0 (*LT_UNS_OP_32_32_1)                         0.00       3.14 r
+  C5223/Z_0 (*SELECT_OP_2.1_2.1_1)                        0.00       3.14 r
+  C5224/Z_0 (*SELECT_OP_22.32_22.1_32)                    0.00       3.14 r
+  C5225/Z_0 (*SELECT_OP_3.32_3.1_32)                      0.00       3.14 r
+  C5220/Z_0 (*SELECT_OP_2.32_2.1_32)                      0.00       3.15 r
+  add_152/A_0 (*ADD_UNS_OP_32_32_32)                      0.00       3.15 r
+  add_152/*cell*11/A[0] (DW01_add_width32)                0.00       3.15 r
+  ...
+  add_152/*cell*11/SUM[31] (DW01_add_width32)             0.06       3.21 r
+  add_152/Z_31 (*ADD_UNS_OP_32_32_32)                     0.00       3.21 r
+  CPU_jalr_tgt_pc_a3_reg[31]/next_state (**SEQGEN**)      0.00       3.21 r
+  data arrival time                                                  3.21
+
+  clock MYCLK (rise edge)                                10.00      10.00
+  clock network delay (ideal)                             3.00      13.00
+  clock uncertainty                                      -0.50      12.50
+  CPU_jalr_tgt_pc_a3_reg[31]/clocked_on (**SEQGEN**)      0.00      12.50 r
+  library setup time                                      0.00      12.50
+  data required time                                                12.50
+  --------------------------------------------------------------------------
+  data required time                                                12.50
+  data arrival time                                                 -3.21
+  --------------------------------------------------------------------------
+  slack (MET)                                                        9.29
+  
+  
+  ```
+
  #### Place, CTS, Route
  
  * Placement is the process of finding a suitable physical location for each cell in the block.
