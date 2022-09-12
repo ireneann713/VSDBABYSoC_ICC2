@@ -286,6 +286,8 @@ In block-level PnR, input-output pins location are generally decided by the full
 
 
 * Reg-to-reg paths
+
+In a reg-to-reg path, both startpoint and endpoint are sequential elements; i.e. either an edge-triggered element or a level sensitive element. Edge-triggered elements are mostly flip-flops, memories or edge-triggered arcs of sub-partitions of the design. Level sensitive elements are mostly latches or any such element such as a sub-partitions level sensitive arcs.
 ```
 Startpoint: CPU_src2_value_a3_reg[0]
               (rising edge-triggered flip-flop clocked by MYCLK)
