@@ -358,11 +358,12 @@ Cells placed inside the core area:
 
 ```
 
+****************************************
 Report : qor
         -summary
 Design : rvmyth
 Version: T-2022.03
-Date   : Mon Sep 12 14:14:11 2022
+Date   : Mon Sep 12 19:58:37 2022
 ****************************************
 
 Timing
@@ -370,25 +371,19 @@ Timing
 Context                                 WNS            TNS            NVE
 ---------------------------------------------------------------------------
 func1::estimated_corner
-                   (Setup)             4.44           0.00              0
-func1              (Setup)             4.33           0.00              0
-Design             (Setup)             4.33           0.00              0
+                   (Setup)             3.43           0.00              0
+func1              (Setup)             3.35           0.00              0
+Design             (Setup)             3.35           0.00              0
 
-func1              (Hold)             -0.03         -26.17           1009
-Design             (Hold)             -0.03         -26.17           1009
+func1              (Hold)             -0.03         -17.12           1009
+Design             (Hold)             -0.03         -17.12           1009
 ---------------------------------------------------------------------------
 
-Miscellaneous
----------------------------------------------------------------------------
-Cell Area (netlist):                           8846.10
-Cell Area (netlist and physical only):         8846.10
-Nets with DRC Violations:       20
 
 
 ```
 
 ```
-
 Report : timing
         -path_type full
         -delay_type max
@@ -396,37 +391,39 @@ Report : timing
         -report_by design
 Design : rvmyth
 Version: T-2022.03
-Date   : Mon Sep 12 14:14:10 2022
+Date   : Mon Sep 12 19:51:55 2022
 ****************************************
 
   Startpoint: reset (input port clocked by MYCLK)
   Endpoint: CPU_reset_a1_reg (rising edge-triggered flip-flop clocked by MYCLK)
   Mode: func1
-  Corner: estimated_corner
-  Scenario: func1::estimated_corner
+  Corner: func1
+  Scenario: func1
   Path Group: **in2reg_default**
   Path Type: max
 
-  Point                                            Incr      Path       Delta Incr     Analysis
-  ----------------------------------------------------------------------------------------------------
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
   clock MYCLK (rise edge)                          0.00      0.00
-  clock network delay (ideal)                      3.00      3.00
+  clock network delay (propagated)                 3.00      3.00
   input external delay                             5.00      8.00 f
-  reset (in)                                       0.00      8.00 f      0.00
-  CPU_reset_a1_reg/D (DFF_X1)                      0.01 e    8.01 f      0.00
-  data arrival time                                          8.01        0.00        Delta arrival
+  reset (in)                                       0.00      8.00 f
+  CPU_reset_a1_reg/D (DFF_X1)                      0.01      8.01 f
+  data arrival time                                          8.01
 
   clock MYCLK (rise edge)                         10.00     10.00
-  clock network delay (ideal)                      3.00     13.00
-  CPU_reset_a1_reg/CK (DFF_X1)                     0.00     13.00 r      0.00
-  clock uncertainty                               -0.50     12.50
-  library setup time                              -0.04     12.46
-  data required time                                        12.46
-  ----------------------------------------------------------------------------------------------------
-  data required time                                        12.46
+  clock network delay (propagated)                 2.00     12.00
+  CPU_reset_a1_reg/CK (DFF_X1)                     0.00     12.00 r
+  clock uncertainty                               -0.50     11.50
+  library setup time                              -0.14     11.36
+  data required time                                        11.36
+  ------------------------------------------------------------------------
+  data required time                                        11.36
   data arrival time                                         -8.01
-  ----------------------------------------------------------------------------------------------------
-  slack (MET)                                                4.44
+  ------------------------------------------------------------------------
+  slack (MET)                                                3.35
+
+
 
 ```
 
@@ -434,7 +431,7 @@ Date   : Mon Sep 12 14:14:10 2022
 Report : qor
 Design : rvmyth
 Version: T-2022.03
-Date   : Mon Sep 12 14:14:10 2022
+Date   : Mon Sep 12 20:02:45 2022
 ****************************************
 
 
@@ -443,7 +440,7 @@ Timing Path Group  '**in2reg_default**'
 ----------------------------------------
 Levels of Logic:                      0
 Critical Path Length:              5.01
-Critical Path Slack:               4.44
+Critical Path Slack:               3.43
 Critical Path Clk Period:         10.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -453,12 +450,88 @@ Scenario           'func1::estimated_corner'
 Timing Path Group  'MYCLK'
 ----------------------------------------
 Levels of Logic:                     41
-Critical Path Length:              3.09
-Critical Path Slack:               6.37
+Critical Path Length:              3.12
+Critical Path Slack:               6.32
 Critical Path Clk Period:         10.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
 ----------------------------------------
+
+Scenario           'func1'
+Timing Path Group  '**in2reg_default**'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:              5.01
+Critical Path Slack:               3.35
+Critical Path Clk Period:         10.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func1'
+Timing Path Group  'MYCLK'
+----------------------------------------
+Levels of Logic:                     41
+Critical Path Length:              3.11
+Critical Path Slack:               6.33
+Critical Path Clk Period:         10.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:             -0.03
+Total Hold Violation:            -17.12
+No. of Hold Violations:            1009
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:              0
+Hierarchical Port Count:              0
+Leaf Cell Count:                   4001
+Buf/Inv Cell Count:                 329
+Buf Cell Count:                     108
+Inv Cell Count:                     221
+CT Buf/Inv Cell Count:                0
+Combinational Cell Count:          2785
+   Single-bit Isolation Cell Count:                        0
+   Multi-bit Isolation Cell Count:                         0
+   Isolation Cell Banking Ratio:                           0.00%
+   Single-bit Level Shifter Cell Count:                    0
+   Multi-bit Level Shifter Cell Count:                     0
+   Level Shifter Cell Banking Ratio:                       0.00%
+   Single-bit ELS Cell Count:                              0
+   Multi-bit ELS Cell Count:                               0
+   ELS Cell Banking Ratio:                                 0.00%
+Sequential Cell Count:             1216
+   Integrated Clock-Gating Cell Count:                     0
+   Sequential Macro Cell Count:                            0
+   Single-bit Sequential Cell Count:                       1216
+   Multi-bit Sequential Cell Count:                        0
+   Sequential Cell Banking Ratio:                          0.00%
+   BitsPerflop:                                            1.00
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:             3346.81
+Noncombinational Area:          5499.28
+Buf/Inv Area:                    204.29
+Total Buffer Area:                86.18
+Total Inverter Area:             118.10
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                    5655.61
+Net YLength:                    2598.97
+----------------------------------------
+Cell Area (netlist):                           8846.10
+Cell Area (netlist and physical only):       134693.36
+Net Length:                     8254.57
+
 
 ```
 
