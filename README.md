@@ -11,22 +11,22 @@
        + [ VSDBABYSoC](#vsdbabysoc)
 
   * [ICC2 COMPILER](##icc-compiler-ii) 
-      +  [Milkyway Reference Libraries]()
-      +  [Technology File (.tf file)]()
-      +  [ICC Design Planning Flow]()
-      +  [Create the Starting Floorplan]()
-      +  [Connecting Power and Ground Ports]()
+      +  [Milkyway Reference Libraries](#1-milkyway-reference-libraries)
+      +  [Technology File (.tf file)](#2-technology-file-tf-file)
+      +  [ICC Design Planning Flow](#icc-design-planning-flow)
+      +  [Create the Starting Floorplan](#create-the-starting-floorplan)
+      +  [Connecting Power and Ground Ports](#connecting-power-and-ground-ports)
       + [ Floorplan After Initialization](#floorplan-after-initialization)
-      +  [Planning I/Os and Flip-Chip Bumps]()
-      +  [Creating a 3DIC Design]()
-      + [ Managing Design Blocks]()
-      + [Performing Block Shaping and Macro Placement]()
-      + [Performing Power Planning]()
-      + [Performing Global Planning]()
-      + [Performing Clock Trunk Planning]()
-      + [Performing Pin Assignment]()
-      + [Performing Timing Budgeting]()
-* [RVMYTH CORE IN VSDBABYSOC ]()
+      +  [Planning I/Os and Flip-Chip Bumps](#planning-ios-and-flip-chip-bumps)
+      +  [Creating a 3DIC Design](#creating-a-3dic-design)
+      + [ Managing Design Blocks](#managing-design-blocks)
+      + [Performing Block Shaping and Macro Placement](#performing-block-shaping-and-macro-placement)
+      + [Performing Power Planning](#performing-power-planning)
+      + [Performing Global Planning](#performing-global-planning)
+      + [Performing Clock Trunk Planning](#performing-clock-trunk-planning)
+      + [Performing Pin Assignment](#performing-pin-assignment)
+      + [Performing Timing Budgeting](#performing-timing-budgeting)
+* [RVMYTH CORE IN VSDBABYSOC ](#rvmyth-core-in-vsdbabysoc)
 
    + [Stages of Physical Design Flow]()
    
@@ -178,7 +178,7 @@ optimization commands.
 
 
 ![image](https://user-images.githubusercontent.com/55539862/189334741-4ce7c848-59a7-4b41-a973-145891b66de4.png)
-
+hierarchies can be black boxes in the tool.
 
 ## Planning I/Os and Flip-Chip Bumps
 
@@ -239,10 +239,7 @@ To support a hierarchical design flow, the IC Compiler II tool provides timing b
 
 
 ![image](https://user-images.githubusercontent.com/55539862/189338325-e40637d5-9bb6-4589-bb8f-d8b3c9e576d9.png)
-
 ## RVMYTH CORE IN VSDBABYSOC 
-
-### Stages of Physical Design Flow
 
 #### Read Synthesized Verilog
  * Synthesise the RVMYTH design using the Design Compiler and generate the Gate Level Netlist and read the synthesised netlist.The library used for the Synthesis 45nm Nangate Typical libs.
