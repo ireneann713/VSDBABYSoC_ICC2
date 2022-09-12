@@ -280,10 +280,6 @@ In block-level PnR, input-output pins location are generally decided by the full
 
 #### Timing Estimation
 
-* IO Path
-
- ![image](https://user-images.githubusercontent.com/55539862/189543461-9e692038-917c-47d0-8157-8dcf256a8928.png)
-
 
 * Reg-to-reg paths
 
@@ -337,7 +333,7 @@ Startpoint: CPU_src2_value_a3_reg[0]
   
   
   ```
-
+  
  #### Place, CTS, Route
  
  * Placement is the process of finding a suitable physical location for each cell in the block.
@@ -355,6 +351,13 @@ logical connections present in the netlist (i.e. Logical connectivity converted 
 Cells placed inside the core area:
 
 ![image](https://user-images.githubusercontent.com/55539862/189545454-75beed6e-cedf-487b-8c9e-1c5a5a2651cc.png)
+
+
+#### Timing Estimation Post Route
+  
+  ![image](https://user-images.githubusercontent.com/55539862/189611644-5c239d27-7372-43d0-9af4-7a8bdaaf2a50.png)
+
+
 
 
 ### Important Points about the design
