@@ -376,7 +376,7 @@ There are two types of noise effects, namely,
 
 ## ACKNOWLEDGEMENTS
 * Kunal Ghosh, Co-founder (VSD Corp. Pvt. Ltd)
-* 
+* Muthukrishnan C, CEO Semiconductor eFabless Accerlerator Lab
 
 ## REFERENCES
 
