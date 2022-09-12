@@ -27,16 +27,13 @@
       + [Performing Pin Assignment](#performing-pin-assignment)
       + [Performing Timing Budgeting](#performing-timing-budgeting)
 * [RVMYTH CORE IN VSDBABYSOC ](#rvmyth-core-in-vsdbabysoc)
-
-   + [Stages of Physical Design Flow]()
-   
-* [Final Output]()
-
-* [Important Points about the design]()
-* [Errors encountered in the Design Flow]()
-
-     
+   + [Stages of Physical Design Flow](#stages-of-physical-design-flow)
+* [Important Points about the design](#important-points-about-the-design)
+* [Errors encountered in the Design Flow](#errors-encountered-in-the-design-flow)
+* [Final Output](#final-output)
+* [Future Works](#future-works) 
 * [Acknowledgements](#acknowledgements)
+* [Contributor](#contributor)
 * [References](#references)
 
 
