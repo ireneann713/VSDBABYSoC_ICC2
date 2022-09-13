@@ -354,100 +354,7 @@ Cells placed inside the core area:
 ![image](https://user-images.githubusercontent.com/55539862/189545454-75beed6e-cedf-487b-8c9e-1c5a5a2651cc.png)
 
 
-### Timing Estimation Post Routing
-```
 
-****************************************
-Report : timing
-        -path full
-        -delay max
-        -max_paths 1
-Design : rvmyth
-Version: S-2021.06-SP5-1
-Date   : Mon Sep 12 21:04:36 2022
-****************************************
-
- # A fanout number of 1000 was used for high fanout net computations.
-
-Operating Conditions: typical   Library: NangateOpenCellLibrary
-Wire Load Model Mode: top
-
-  Startpoint: CPU_is_sub_a3_reg
-              (rising edge-triggered flip-flop clocked by MYCLK)
-  Endpoint: CPU_Xreg_value_a4_reg[10][31]
-            (rising edge-triggered flip-flop clocked by MYCLK)
-  Path Group: MYCLK
-  Path Type: max
-
-  Des/Clust/Port     Wire Load Model       Library
-  ------------------------------------------------
-  rvmyth             5K_hvratio_1_1        NangateOpenCellLibrary
-
-  Point                                                   Incr       Path
-  --------------------------------------------------------------------------
-  clock MYCLK (rise edge)                                 0.00       0.00
-  clock network delay (propagated)                        5.03       5.03
-  CPU_is_sub_a3_reg/CK (DFF_X1)                           0.00 #     5.03 r
-  CPU_is_sub_a3_reg/Q (DFF_X1)                            0.12       5.15 r
-  U5065/ZN (AND3_X1)                                      0.19       5.34 r
-  U5491/Z (CLKBUF_X1)                                     0.17       5.51 r
-  U5503/ZN (OR2_X1)                                       0.15       5.66 r
-  U5522/Z (CLKBUF_X1)                                     0.14       5.79 r
-  U5617/ZN (NAND2_X1)                                     0.04       5.84 f
-  U5619/ZN (NAND2_X1)                                     0.03       5.87 r
-  U5620/Z (XOR2_X1)                                       0.04       5.91 f
-  DP_OP_214J1_122_1213/U33/CO (FA_X1)                     0.10       6.00 f
-  DP_OP_214J1_122_1213/U32/CO (FA_X1)                     0.09       6.09 f
-  DP_OP_214J1_122_1213/U31/CO (FA_X1)                     0.09       6.18 f
-  DP_OP_214J1_122_1213/U30/CO (FA_X1)                     0.09       6.27 f
-  DP_OP_214J1_122_1213/U29/CO (FA_X1)                     0.09       6.37 f
-  DP_OP_214J1_122_1213/U28/CO (FA_X1)                     0.09       6.46 f
-  DP_OP_214J1_122_1213/U27/CO (FA_X1)                     0.09       6.55 f
-  DP_OP_214J1_122_1213/U26/CO (FA_X1)                     0.09       6.64 f
-  DP_OP_214J1_122_1213/U25/CO (FA_X1)                     0.09       6.73 f
-  DP_OP_214J1_122_1213/U24/CO (FA_X1)                     0.09       6.82 f
-  DP_OP_214J1_122_1213/U23/CO (FA_X1)                     0.09       6.91 f
-  DP_OP_214J1_122_1213/U22/CO (FA_X1)                     0.09       7.00 f
-  DP_OP_214J1_122_1213/U21/CO (FA_X1)                     0.09       7.09 f
-  DP_OP_214J1_122_1213/U20/CO (FA_X1)                     0.09       7.18 f
-  DP_OP_214J1_122_1213/U19/CO (FA_X1)                     0.09       7.27 f
-  DP_OP_214J1_122_1213/U18/CO (FA_X1)                     0.09       7.36 f
-  DP_OP_214J1_122_1213/U17/CO (FA_X1)                     0.09       7.45 f
-  DP_OP_214J1_122_1213/U16/CO (FA_X1)                     0.09       7.54 f
-  DP_OP_214J1_122_1213/U15/CO (FA_X1)                     0.09       7.63 f
-  DP_OP_214J1_122_1213/U14/CO (FA_X1)                     0.09       7.72 f
-  DP_OP_214J1_122_1213/U13/CO (FA_X1)                     0.09       7.82 f
-  DP_OP_214J1_122_1213/U12/CO (FA_X1)                     0.09       7.91 f
-  DP_OP_214J1_122_1213/U11/CO (FA_X1)                     0.09       8.00 f
-  DP_OP_214J1_122_1213/U10/CO (FA_X1)                     0.09       8.09 f
-  DP_OP_214J1_122_1213/U9/CO (FA_X1)                      0.09       8.18 f
-  DP_OP_214J1_122_1213/U8/CO (FA_X1)                      0.09       8.27 f
-  DP_OP_214J1_122_1213/U7/CO (FA_X1)                      0.09       8.36 f
-  DP_OP_214J1_122_1213/U6/CO (FA_X1)                      0.09       8.45 f
-  DP_OP_214J1_122_1213/U5/CO (FA_X1)                      0.09       8.54 f
-  DP_OP_214J1_122_1213/U4/CO (FA_X1)                      0.09       8.63 f
-  DP_OP_214J1_122_1213/U3/CO (FA_X1)                      0.09       8.72 f
-  U5912/Z (XOR2_X1)                                       0.06       8.78 r
-  U5913/ZN (NAND2_X1)                                     0.12       8.90 f
-  U7632/Z (CLKBUF_X1)                                     0.13       9.03 f
-  U7641/ZN (OAI22_X1)                                     0.07       9.10 r
-  CPU_Xreg_value_a4_reg[10][31]/D (DFF_X1)                0.01       9.11 r
-  data arrival time                                                  9.11
-
-  clock MYCLK (rise edge)                                10.00      10.00
-  clock network delay (propagated)                        5.03      15.03
-  clock uncertainty                                      -0.50      14.53
-  CPU_Xreg_value_a4_reg[10][31]/CK (DFF_X1)               0.00      14.53 r
-  library setup time                                     -0.06      14.47
-  data required time                                                14.47
-  --------------------------------------------------------------------------
-  data required time                                                14.47
-  data arrival time                                                 -9.11
-  --------------------------------------------------------------------------
-  slack (MET)                                                        5.37
-
-
-```
 
 
 ### Important Points about the design
@@ -517,6 +424,14 @@ There are two types of noise effects, namely,
  
  * Crosstalk delta delay analysis is to be done for this design.
  
+### Timing Estimation Post Routing
+
+![Untitled](https://user-images.githubusercontent.com/55539862/189938187-3ecb1fc2-dc1b-4cdb-ab03-22dd877275c5.png)
+![image](https://user-images.githubusercontent.com/55539862/189938742-78d8ad11-6347-4ad2-960e-8c84fbdeb1bb.png)
+
+
+* In the Timing Estimation post routing, the clock network delay is zero as highlighted in the above image, which is not possible.So,it need to be solved.The error may be due to the problem with Library files.
+
 
 ## Contributors
 [Irene Ann Zachariah](https://in.linkedin.com/in/irene-ann-zachariah231)
