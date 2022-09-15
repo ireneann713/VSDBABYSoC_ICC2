@@ -468,7 +468,13 @@ There are two types of noise effects, namely,
 
 * Integration Analog Blocks such as PLL and DAC should be done and whole design flow should be made in 28nm Technology.
 
-* Due to some errors, Clock Tree Synthesis did not happen.The ways to solve those errors are looked upon.
+### Timing Estimation Post Routing
+
+![Untitled](https://user-images.githubusercontent.com/55539862/189938187-3ecb1fc2-dc1b-4cdb-ab03-22dd877275c5.png)
+![image](https://user-images.githubusercontent.com/55539862/189938742-78d8ad11-6347-4ad2-960e-8c84fbdeb1bb.png)
+
+
+* In the Timing Estimation post routing, the clock network delay is zero as highlighted in the above image, which is not possible.So,it need to be solved.The error may be due to the problem with Library files.So,the Clock Tree Synthesis did not happen.The ways to solve those errors are looked upon.
   
 
 ## Contributors
