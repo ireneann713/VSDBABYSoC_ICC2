@@ -34,7 +34,7 @@
 * [Final Output](#final-output)
 * [Future Works](#future-works) 
     + [Crosstalk](#cross-talk-analysis-in-physical-design)
-    + [Timing Estimation Post Route](#timing-estimation-post-routing)
+    + [Hold Time Violation](#hold-time-violation)
 * [Acknowledgements](#acknowledgements)
 * [Contributors](#contributors)
 * [References](#references)
@@ -426,14 +426,47 @@ There are two types of noise effects, namely,
  
  * Crosstalk delta delay analysis is to be done for this design.
  
-### Timing Estimation Post Routing
+ ### Hold Time Violation
+ 
+* Hold time is defined as the minimum amount of time after the clock's active edge during which the data must be stable. Any violation in this required time causes incorrect data to be latched and is known as a hold violation.
+ Hold Time Violation occured while running the design and that needs to be solved
+ 
+ 
+ ```
+ Startpoint: core/CPU_imm_a2_reg[31] (rising edge-triggered flip-flop clocked by MYCLK)
+  Endpoint: core/CPU_imm_a3_reg[31] (rising edge-triggered flip-flop clocked by MYCLK)
+  Mode: func1
+  Corner: func1
+  Scenario: func1
+  Path Group: MYCLK
+  Path Type: min
 
-![Untitled](https://user-images.githubusercontent.com/55539862/189938187-3ecb1fc2-dc1b-4cdb-ab03-22dd877275c5.png)
-![image](https://user-images.githubusercontent.com/55539862/189938742-78d8ad11-6347-4ad2-960e-8c84fbdeb1bb.png)
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1474    0.1474
 
+  core/CPU_imm_a2_reg[31]/CK (DFF_X1)              0.0000    0.1474 r
+  core/CPU_imm_a2_reg[31]/Q (DFF_X1)               0.1038    0.2512 r
+  core/CPU_imm_a3_reg[31]/D (DFF_X1)               0.0004    0.2516 r
+  data arrival time                                          0.2516
 
-* In the Timing Estimation post routing, the clock network delay is zero as highlighted in the above image, which is not possible.So,it need to be solved.The error may be due to the problem with Library files.
+  clock MYCLK (rise edge)                          0.0000    0.0000
+  clock network delay (propagated)                 0.1631    0.1631
+  clock reconvergence pessimism                   -0.0035    0.1596
+  core/CPU_imm_a3_reg[31]/CK (DFF_X1)              0.0000    0.1596 r
+  clock uncertainty                                0.1000    0.2596
+  library hold time                                0.0195    0.2791
+  data required time                                         0.2791
+  --------------------------------------------------------------------------
+  data required time                                         0.2791
+  data arrival time                                         -0.2516
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.0275
 
+```
+
+* Integration Analog Blocks such as PLL and DAC should be done and whole design flow should be made in 28nm Technology.
 
 ## Contributors
 [Irene Ann Zachariah](https://in.linkedin.com/in/irene-ann-zachariah231)
