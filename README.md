@@ -467,7 +467,9 @@ There are two types of noise effects, namely,
 
 ```
 
-* Integration Analog Blocks such as PLL and DAC should be done and whole design flow should be made in 28nm Technology.
+### Integration of Analog Blocks and RVMYTH Core
+
+* Integration Analog Blocks such as PLL and DAC with rvmyth core should be done and whole design flow should be made in 28nm Technology.
 
 ### Timing Estimation Post Routing
 
