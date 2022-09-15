@@ -468,6 +468,9 @@ There are two types of noise effects, namely,
 
 * Integration Analog Blocks such as PLL and DAC should be done and whole design flow should be made in 28nm Technology.
 
+* Due to some errors, Clock Tree Synthesis did not happen.The ways to solve those errors are looked upon.
+  
+
 ## Contributors
 [Irene Ann Zachariah](https://in.linkedin.com/in/irene-ann-zachariah231)
 
