@@ -429,7 +429,7 @@ There are two types of noise effects, namely,
  ### Hold Time Violation
  
 * Hold time is defined as the minimum amount of time after the clock's active edge during which the data must be stable. Any violation in this required time causes incorrect data to be latched and is known as a hold violation.
- Hold Time Violation occured while running the design and that needs to be solved
+* Hold Time Violation occured while running the design and that needs to be solved
  
  
  ```
