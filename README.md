@@ -35,7 +35,7 @@
 * [Future Works](#future-works) 
     + [Crosstalk](#cross-talk-analysis-in-physical-design)
     + [Hold Time Violation](#hold-time-violation)
-    + [Integration of Analog Blocks and RVMYTH Core](integration-of-analog-blocks-and-rvmyth-core)
+    + [Integration of Analog Blocks and RVMYTH Core](#integration-of-analog-blocks-and-rvmyth-core)
     + [Timing Estimation Post Routing](#timing-estimation-post-routing)
 * [Acknowledgements](#acknowledgements)
 * [Contributors](#contributors)
