@@ -89,7 +89,7 @@ As we mentioned in [What is RVMYTH](#what-is-rvmyth) section, RVMYTH is designed
 
 It is not possible to sythesis an analog design with Verilog, yet. But there is a chance to simulate it using `real` datatype. We will use the following repositories to model the PLL cores:
 
-  [Here]([https://github.com/ireneann713/PLL]) is the repo we used as a reference to model the PLL
+  [Here](https://github.com/ireneann713/PLL) is the repo we used as a reference to model the PLL
   
 ## ICC Compiler II
 
