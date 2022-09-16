@@ -14,7 +14,7 @@
       +  [Milkyway Reference Libraries](#1-milkyway-reference-libraries)
       +  [Technology File (.tf file)](#2-technology-file-tf-file)
       +  [ICC Design Planning Flow](#icc-design-planning-flow)
-      +  [Create the Starting Floorplan](#create-the-starting-floorplan)
+<!-- +  [Create the Starting Floorplan](#create-the-starting-floorplan)
       +  [Connecting Power and Ground Ports](#connecting-power-and-ground-ports)
       + [ Floorplan After Initialization](#floorplan-after-initialization)
       +  [Planning I/Os and Flip-Chip Bumps](#planning-ios-and-flip-chip-bumps)
@@ -25,7 +25,7 @@
       + [Performing Global Planning](#performing-global-planning)
       + [Performing Clock Trunk Planning](#performing-clock-trunk-planning)
       + [Performing Pin Assignment](#performing-pin-assignment)
-      + [Performing Timing Budgeting](#performing-timing-budgeting)
+      + [Performing Timing Budgeting](#performing-timing-budgeting) -->
 * [RVMYTH CORE IN VSDBABYSOC ](#rvmyth-core-in-vsdbabysoc)
    + [Stages of Physical Design Flow](#stages-of-physical-design-flow)
    
@@ -161,7 +161,7 @@ If the design contains black boxes or the netlist is dirty, use the read_mw_veri
 import_designs.
 Also include adding of power pads (VSS,VDD) and insertion of pad fillers;
 
-# Create the Starting Floorplan
+<!--# Create the Starting Floorplan
 
 ![image](https://user-images.githubusercontent.com/55539862/189334457-294543eb-bfad-473d-b262-c2864512125a.png)
 
@@ -240,7 +240,7 @@ The IC Compiler II tool provides extensive control over pin placement and feedth
 To support a hierarchical design flow, the IC Compiler II tool provides timing budgeting to allocate timing among the blocks in the design. The budgeting process begins by partitioning the chip-level timing constraints into top-level and block-level constraints. To speed the budget creation process, the tool creates lightweight timing abstract representations for the blocks in the design. Each block is virtually optimized to negate the effects of high-fanout nets and provide more accurate timing estimations. The timing budgeter uses the optimized timing for each block to derive new budgets. In the final step, top-level and block-level timing budgets are written out in preparation for further block-level optimization. The timing budgeter is fully multimode and multicorner aware, and handles designs with multiply instantiated blocks.
 
 
-![image](https://user-images.githubusercontent.com/55539862/189338325-e40637d5-9bb6-4589-bb8f-d8b3c9e576d9.png)
+![image](https://user-images.githubusercontent.com/55539862/189338325-e40637d5-9bb6-4589-bb8f-d8b3c9e576d9.png) -->
 ## RVMYTH CORE IN VSDBABYSOC 
 
 ### Stages of Physical Design Flow
